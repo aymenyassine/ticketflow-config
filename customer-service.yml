@@ -5,4 +5,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,refresh
+
+ticketflow:
+  message: "Bienvenue dans TicketFlow - configuration v1"
