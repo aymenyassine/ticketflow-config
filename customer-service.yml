@@ -9,3 +9,16 @@ management:
 
 ticketflow:
   message: "Bienvenue dans TicketFlow - configuration v2.1"
+
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/ticketflow
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
