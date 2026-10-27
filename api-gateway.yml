@@ -22,6 +22,12 @@ spring:
                 - Path=/event-service/api/v1/**
               filters:
                 - StripPrefix=1
+            - id: booking-service
+              uri: lb://booking-service
+              predicates:
+                - Path=/booking-service/api/v1/**
+              filters:
+                - StripPrefix=1    
 
 management:
   endpoint:
