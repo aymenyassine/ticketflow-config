@@ -13,8 +13,9 @@ spring:
             - id: customer-service
               uri: lb://customer-service
               predicates:
-                - Path=/api/customers/**
+                - Path=/customer-service/api/v1/**
               filters:
+                - StripPrefix=1
                 - AddResponseHeader=X-Served-By, api-gateway
             - id: event-service
               uri: lb://event-service
